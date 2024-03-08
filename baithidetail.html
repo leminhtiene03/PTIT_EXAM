@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   
-    <title>PTIT EXAM</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/baithidetail.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  
     <div id="left_part">
              
     
@@ -28,7 +25,7 @@
 
         <div id="final_part">
             <ul id="final_part_list">
-               <button onclick="touch()"> <i class="fa-solid fa-plus"></i>  Gia nhập lớp mới</button>  
+               <button>  <a href="index.html"><i class="fa-solid fa-plus"></i>  Gia nhập lớp mới</a> </button>  
                 <li class = "final_part_li"><a href="">Mạng máy tính</a>  </li>
                 <li class = "final_part_li"><a href="">Công nghệ phần mềm </a>      </li>
                 <li class = "final_part_li"><a href="">CSDL Phân tán</a>    </li>
@@ -51,7 +48,7 @@
         </div>
 
         <a href="">  <i id="right_bar" class="fa-regular fa-share-from-square"></i> </a>
-        <img onclick="close_drop()" src="images/logo3.jpg" alt="" id="top_img">
+        <img src="images/logo3.jpg" alt="" id="top_img">
         <div id="menu_avatar">
             <div id="menu_avatar_top"> 
                 <img src="images/logo3.jpg" alt="" id="ava1">
@@ -83,50 +80,70 @@
         </div>
     </div>
     </div>
+<main>
 
-   <main>
-    <form id="add_class">
-        <i id ="close_form"class="fa-solid fa-xmark" onclick="close_creat()"></i>
-        <h3>Gia nhập lớp mới</h3>
-        <div class="box_add_Class">
-            <label for="">Mã mời</label>
-            <input type="text"> 
-    
+    <div id="top_main_ele">
+        <p>Bảng tin</p>
+        <p>Mọi Người</p>
+        <p>Liên hệ</p>
+     </div>
+
+     <div id="content_detail">
+        <div id="content_detail_left">
+            <div id="top_name">
+                <i class="fa-solid fa-file"></i>
+            <h2>Bài tập frontend - lấy điểm</h2>
+            </div>
+            <div id="content_left_below">
+                <p id="content_author">Lê Minh Tiến</p>
+               <div id="time_line">
+                <p id="start">Ngày 10 tháng 10 năm 20</p>
+                <p id ="end"> Ngày 10 tháng 10 năm 200</p>
+               </div>
+               <span></span>
+                <p id="content_notice">Buổi đầu nộp ít nhất 1 page <br>
+                    Mỗi nhóm chỉ nộp 1 bài duy nhất, cụ thể:    <br>
+                    + Các trang được deploy lên github để có thể truy cập chạy được <br>
+                    + Code (html, css, javascript) được nén vào file zip, tên file là tên nhóm, ví dụ 1.zip, 2.zip ...
+                </p>
+
+                <div id="content_file">
+                    <a href="file/Tài-liệu-7.docx">Tài liệu tham khảo</a>
+                    <a href=""></a>
+                    <a href=""></a><a href=""></a>
+                  
+                   
+                </div>
+            </div>
+          
         </div>
-
-    
-        <div class="box_add_Class">
-            <label for="">Mật khẩu lớp</label>
-            <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
-    
-        </div>
-        <button>Vô lớp</button>
-    </form>
-
-<div class="subject_box">
-    <div class="option_block">
-        <ul>
-            <li>Hủy đăng kí</li>
-            <li>Báo cáo</li>
-            <li>Thông tin</li>
-        </ul>
-    </div>
-    <div class="top_box">
+        
        
-        <a href="list_baitap.html" class="subject_name">Lập trình web</a>
-        <i class="fa-solid fa-ellipsis-vertical"></i><br>
-        <a href="" class="author_name">Lê Minh Tiến</a>
-    </div>
-    <img src="images/ava.jpg" alt="" class="author_ava">
-    <p class="descrire_subject">Môn lập trình web</p>
+     <div>
+           
+        </div>
+
+       
+        <div id="content_right">
+            <div id="bar_right">
+                <label>Trạng thái bài thi</label> <p>Trong thời hạn</p>
+            </div>
+            <div id="bar_right">
+                <label>Hoàn thành</label> <p>Chưa</p>
+            </div> 
+               <button><a href="baithi.html">Bắt đầu làm bài thi</a></button>
+        </div>
+     </div>
+    
+    
+</main>
+
    
-</div>
 
 
-
-   </main>
-   
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/d542a4d4a5.js" crossorigin="anonymous"></script>
 </body>
+
+
 </html>

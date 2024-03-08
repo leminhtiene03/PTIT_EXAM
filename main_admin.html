@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main_admin.css">
 </head>
 <body>
   
@@ -28,7 +29,7 @@
 
         <div id="final_part">
             <ul id="final_part_list">
-               <button onclick="touch()"> <i class="fa-solid fa-plus"></i>  Gia nhập lớp mới</button>  
+               <button class="" id="creat_new_class" onclick="touch()">  <i class="fa-solid fa-plus"></i>  Tạo lớp mới</button>  
                 <li class = "final_part_li"><a href="">Mạng máy tính</a>  </li>
                 <li class = "final_part_li"><a href="">Công nghệ phần mềm </a>      </li>
                 <li class = "final_part_li"><a href="">CSDL Phân tán</a>    </li>
@@ -51,7 +52,7 @@
         </div>
 
         <a href="">  <i id="right_bar" class="fa-regular fa-share-from-square"></i> </a>
-        <img onclick="close_drop()" src="images/logo3.jpg" alt="" id="top_img">
+        <img src="images/logo3.jpg" alt="" id="top_img">
         <div id="menu_avatar">
             <div id="menu_avatar_top"> 
                 <img src="images/logo3.jpg" alt="" id="ava1">
@@ -85,36 +86,20 @@
     </div>
 
    <main>
-    <form id="add_class">
-        <i id ="close_form"class="fa-solid fa-xmark" onclick="close_creat()"></i>
-        <h3>Gia nhập lớp mới</h3>
-        <div class="box_add_Class">
-            <label for="">Mã mời</label>
-            <input type="text"> 
-    
-        </div>
 
-    
-        <div class="box_add_Class">
-            <label for="">Mật khẩu lớp</label>
-            <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
-    
-        </div>
-        <button>Vô lớp</button>
-    </form>
 
 <div class="subject_box">
     <div class="option_block">
         <ul>
-            <li>Hủy đăng kí</li>
-            <li>Báo cáo</li>
-            <li>Thông tin</li>
+            <li>Sửa thông tin</li>
+            <li>Xóa lớp</li>
+            <li>Bảo lưu lớp</li>
         </ul>
     </div>
     <div class="top_box">
        
         <a href="list_baitap.html" class="subject_name">Lập trình web</a>
-        <i class="fa-solid fa-ellipsis-vertical"></i><br>
+        <i class="fa-solid fa-ellipsis-vertical" onclick="option_block_open()"></i><br>
         <a href="" class="author_name">Lê Minh Tiến</a>
     </div>
     <img src="images/ava.jpg" alt="" class="author_ava">
@@ -122,11 +107,29 @@
    
 </div>
 
+    <form id="add_class">
+        <i id ="close_form"class="fa-solid fa-xmark" onclick="close_creat()"></i>
+        <h3>Tạo lớp mới</h3>
+        <div class="box_add_Class">
+            <label for="">Tên lớp</label>
+            <input type="text"> 
+    
+        </div>
+
+    
+        <div class="box_add_Class">
+            <label for="">Mô tả</label>
+            <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+    
+        </div>
+        <button>Tạo lớp</button>
+    </form>
 
 
    </main>
-   
-    <script src="js/main.js"></script>
-    <script src="https://kit.fontawesome.com/d542a4d4a5.js" crossorigin="anonymous"></script>
+  
+   <script src="https://kit.fontawesome.com/d542a4d4a5.js" crossorigin="anonymous"></script>
+   <script src="js/main.js"></script>
 </body>
+ 
 </html>
