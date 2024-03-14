@@ -2,7 +2,7 @@
     height: 65px;
     background-color: #AD171C;
     width: 100%;
-   
+   z-index: 5;
    position: fixed;
    
   
@@ -21,6 +21,7 @@ a{
     width: 100%;
     display: flex;
     justify-content:center;
+    position: relative;
    
    
 }
@@ -60,6 +61,7 @@ a{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border: none;
+    
 }
 #but_top:focus-visible{
     outline: none;
@@ -94,7 +96,7 @@ position: absolute;
     border-radius: 15px;
     
 
-    display: block;
+    display: none;
 }
 #menu_avatar_top{
     height: 100px;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/listbaitap.css">
+    <link rel="stylesheet" href="CSS/baithidetail.css">
 </head>
 <body>
   
@@ -29,7 +30,7 @@
 
         <div id="final_part">
             <ul id="final_part_list">
-               <button>  <a href="index.html"><i class="fa-solid fa-plus"></i>  Gia nhập lớp mới</a> </button>  
+               <button onclick="touch()"> <i class="fa-solid fa-plus"></i>  Gia nhập lớp mới</button>  
                 <li class = "final_part_li"><a href="">Mạng máy tính</a>  </li>
                 <li class = "final_part_li"><a href="">Công nghệ phần mềm </a>      </li>
                 <li class = "final_part_li"><a href="">CSDL Phân tán</a>    </li>
@@ -52,10 +53,10 @@
         </div>
 
         <a href="">  <i id="right_bar" class="fa-regular fa-share-from-square"></i> </a>
-        <img src="images/logo3.jpg" alt="" id="top_img">
+        <img onclick="close_drop()"src="images/logo3.jpg" alt="" id="top_img">
         <div id="menu_avatar">
             <div id="menu_avatar_top"> 
-                <img src="images/logo3.jpg" alt="" id="ava1">
+                <img  src="images/logo3.jpg" alt="" id="ava1">
                 <p>Le Minh Tien</p>
                 <p>leminhtienpipt@gmail.com</p>
                <p><a href="">Quản lý tài khoản của bạn</a></p> 
@@ -64,7 +65,7 @@
 
         <div id="topbar_2">
             <ul>
-                <li> <a href=""><i class="fa-solid fa-user-tie"></i>Kênh của bạn</a></li>
+                <li> <a href=""><i class="fa-solid fa-user-tie"></i>Lớp của bạ<nav></nav></a></li>
                 <li><a href=""><i class="fa-solid fa-money-check-dollar"></i>Gói thành viên tính phí</a></li>
                 <li> <a href=""><i class="fa-solid fa-users"></i>Chuyển đổi tài khoản</a></li>
                 <li><a href=""><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a></li>                  
@@ -73,8 +74,8 @@
 
         <div id="topbar_3">
             <ul>
-                <li> <a href=""><i class="fa-solid fa-user-tie"></i>Tải nhạc lên</a></li>
-                <li><a href=""><i class="fa-solid fa-money-check-dollar"></i>Video đã xem</a></li>
+                <li> <a href=""><i class="fa-solid fa-user-tie"></i>File đã tải lên</a></li>
+                <li><a href=""><i class="fa-solid fa-money-check-dollar"></i>Kì thi đã làm</a></li>
                 <li> <a href=""><i class="fa-solid fa-users"></i>Cài đặt</a></li>
                 <li><a href=""><i class="fa-solid fa-right-from-bracket"></i> Điều khoản và chính sách</a></li>  
                 <li> <a href=""><i class="fa-solid fa-users"></i>Trợ giúp</a></li>
@@ -88,9 +89,9 @@
    <main>
 
     <div id="top_main_ele">
-       <p>Bảng tin</p>
-       <p>Mọi Người</p>
-       <p>Liên hệ</p>
+       <p onclick="change_part_ele2()">Bảng tin</p>
+       <p onclick="change_part_ele()">Mọi Người</p>
+       <p>Lịch sử</p>
     </div>
     <div style="background-image:url('https://asia-1.console.stringee.com/upload/IMG_HVTDVXGZYP9YB1MP.jpg');"id="class_name">
         <p>Lập trình web</p>
@@ -98,28 +99,20 @@
        
 
     </div>
-
+ 
     <div id="content_subject">
         <ul>
-            <li><a href="baithidetail.html">
+            <li onclick="show_detail()">
                 <i class="fa-regular fa-file"></i>
                 <p>Nguyen Trong Khanh đã đăng một bài tập mới: Bài tập frontend - lấy điểm</p>
-            </a>
             </li>
-            <li><a href="baithidetail.html">
-                <i class="fa-regular fa-file"></i>
-                <p>Nguyen Trong Khanh đã đăng một bài tập mới: Bài tập frontend - lấy điểm</p>
-            </a>
-            </li>
-            <li><a href="baithidetail.html">
-                <i class="fa-regular fa-file"></i>
-                <p>Nguyen Trong Khanh đã đăng một bài tập mới: Bài tập frontend - lấy điểm</p>
-            </a>
-            </li>
+          
            
            
         </ul>
     </div>
+
+
     <div id="content_people">
         <ul>
             <p>Giảng viên</p>
@@ -150,8 +143,49 @@
         </ul>
     </div>
 
+   <div id="content_detail">
+        <div id="content_detail_left">
+            <div id="top_name">
+                <i class="fa-solid fa-file"></i>
+            <h2>Bài tập frontend - lấy điểm</h2>
+            </div>
+            <div id="content_left_below">
+                <p id="content_author">Lê Minh Tiến</p>
+               <div id="time_line">
+                <p id="start">Ngày 10 tháng 10 năm 20</p>
+                <p id ="end"> Ngày 10 tháng 10 năm 200</p>
+               </div>
+               <span></span>
+                <p id="content_notice">Buổi đầu nộp ít nhất 1 page <br>
+                    Mỗi nhóm chỉ nộp 1 bài duy nhất, cụ thể:    <br>
+                    + Các trang được deploy lên github để có thể truy cập chạy được <br>
+                    + Code (html, css, javascript) được nén vào file zip, tên file là tên nhóm, ví dụ 1.zip, 2.zip ...
+                </p>
 
+                <div id="content_file">
+                    <a href="file/Tài-liệu-7.docx">Tài liệu tham khảo</a>
+                    <a href=""></a>
+                    <a href=""></a><a href=""></a>
+                  
+                   
+                </div>
+                
+            </div>
+        
+        </div>
+        <div id="content_right">
+            <div id="bar_right">
+                <label>Trạng thái bài thi</label> <p>Trong thời hạn</p>
+            </div>
+            <div id="bar_right">
+                <label>Hoàn thành</label> <p>Chưa</p>
+            </div> 
+               <button><a href="baithi.html">Bắt đầu làm bài thi</a></button>
+        </div>
+    </div>
+      
 
+        
 
    </main>
    

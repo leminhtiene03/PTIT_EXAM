@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTIT EXAM</title>
+    <link rel="stylesheet" href="./assests/css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <header>
+       <a href="list_baitapadmin.html"><i class="fa-solid fa-arrow-left"></i></a> 
+        <p>Create/Edit Quiz</p>
+    </header>
+
+    <div class="container">
+        <form id="quiz-form">
+            <label for="quiz-name">Quiz Name:</label>
+            <input type="text" id="quiz-name" name="quiz-name">
+
+            <label for="quiz-description">Description:</label>
+            <textarea id="quiz-description" name="quiz-description"></textarea>
+
+            <label for="quiz-type">Quiz Type:</label>
+            <select id="quiz-type" name="quiz-type">
+                <option value="free">Free</option>
+                <option value="specific-date">Specific Date</option>
+            </select>
+
+            <div id="specific-date-container" style="display: none;">
+                <label for="specific-date">Specific Date:</label>
+                <input type="date" id="specific-date" name="specific-date">
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time" name="start-time">
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time" name="end-time">
+            </div>
+
+            <h2>Questions</h2>
+            <div id="questions-container">
+                <!-- Questions will be dynamically added here -->
+            </div>
+        
+            <button type="button" id="add-question">Add Question</button>
+            <button type="submit">Save Quiz</button>
+        </form>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/d542a4d4a5.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/main_admin.css">
+    
 </head>
 <body>
   
@@ -48,11 +49,24 @@
         </div> 
         <div id="input_top">
             <label for=""><i class="fa-solid fa-magnifying-glass"></i></label>
-            <input maxlength="50" placeholder="Tìm tên bài tập, môn học"id="but_top"></input> 
+            <input maxlength="50" placeholder="Tra cứu sinh viên"id="but_top">  <button onclick="searchStudent()" id="que_ry">Search</button></input> 
+
         </div>
 
+        <div id="query">
+            <div id="results"></div>
+            <div id="detailsModal" class="modal">
+                <div class="modal-content">
+                    <span onclick="close_search()" id="close">&times;</span>
+                    <div id="detailResult"></div>
+                </div>
+            </div>
+        </div>
+       
+
+
         <a href="">  <i id="right_bar" class="fa-regular fa-share-from-square"></i> </a>
-        <img src="images/logo3.jpg" alt="" id="top_img">
+        <img onclick="close_drop()" src="images/logo3.jpg" alt="" id="top_img">
         <div id="menu_avatar">
             <div id="menu_avatar_top"> 
                 <img src="images/logo3.jpg" alt="" id="ava1">
@@ -89,16 +103,16 @@
 
 
 <div class="subject_box">
-    <div class="option_block">
+    <div id = "add_mi"class="option_block">
         <ul>
-            <li>Sửa thông tin</li>
+            <li onclick="change_i4()" id="fix_class_i4">Sửa thông tin</li>
             <li>Xóa lớp</li>
             <li>Bảo lưu lớp</li>
         </ul>
     </div>
     <div class="top_box">
        
-        <a href="list_baitap.html" class="subject_name">Lập trình web</a>
+        <a href="list_baitapadmin.html" class="subject_name">Lập trình web</a>
         <i class="fa-solid fa-ellipsis-vertical" onclick="option_block_open()"></i><br>
         <a href="" class="author_name">Lê Minh Tiến</a>
     </div>
@@ -125,11 +139,30 @@
         <button>Tạo lớp</button>
     </form>
 
+    <form id="fix_class">
+        <i id ="close_form"class="fa-solid fa-xmark" onclick="close_creat()"></i>
+        <h3>Sửa thông tin lớp</h3>
+        <div class="box_add_Class">
+            <label for="">Tên lớp</label>
+            <input type="text" id = "class_name_change"> 
+    
+        </div>
+
+    
+        <div class="box_add_Class">
+            <label for="">Mô tả</label>
+            <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+    
+        </div>
+        <button>Tạo lớp</button>
+    </form>
+
 
    </main>
   
    <script src="https://kit.fontawesome.com/d542a4d4a5.js" crossorigin="anonymous"></script>
    <script src="js/main.js"></script>
+   <script src="js/search.js"></script>
 </body>
  
 </html>

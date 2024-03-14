@@ -33,6 +33,7 @@ main {
     padding-top: 30px;
     width:100% ;
     position: relative;
+    display: none;
 }
 #content_detail_left {
     width: 70%;

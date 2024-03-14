@@ -83,8 +83,11 @@ loginBtn.addEventListener("click", function(){
     for(let i=0;i<users.length;i++)
     {
         if(userpasswordInp.value != "" && userEmailInp.value != "" )
+        {   if(userEmailInp.value == 'admin' && userpasswordInp.value == 'admin')
         {
-            if(userEmailInp.value == users[i].email && userpasswordInp.value == users[i].password)
+            window.location.href="main_admin.html"
+        }
+           else if(userEmailInp.value == users[i].email && userpasswordInp.value == users[i].password)
             {
 
                 window.location.href="main.html"
